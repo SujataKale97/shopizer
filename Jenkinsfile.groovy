@@ -4,8 +4,7 @@ node
   {
      git 'https://github.com/SujataKale97/shopizer.git'
     sh '''
-    cd sm-shop
-   sudo mvn spring-boot:run
+    sudo mvn clean install
     '''
   }
   stage("Deploy code to tomcat server")
