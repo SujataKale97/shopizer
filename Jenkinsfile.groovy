@@ -3,10 +3,10 @@ node
   stage("Build Code")
   {
      git 'https://github.com/SujataKale97/shopizer.git'
-    sh '
+    sh '''
     cd sm-shop
    sudo mvn spring-boot:run
-    '
+    '''
   }
   stage("Deploy code to tomcat server")
   {
