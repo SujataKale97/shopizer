@@ -10,4 +10,3 @@ node
     sh 'sudo cp target/*.war /usr/lib/tomcat/webapps/'
   }
 }
-© 2019 GitHub, I
