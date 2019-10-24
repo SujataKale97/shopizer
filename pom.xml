@@ -294,7 +294,16 @@
 				      <dockerFileDir>${project.basedir}</dockerFileDir>
 				    </build>
 				  </image>
-				<tasks>
+				</images>
+			      </configuration>
+			    </plugin>
+			 <plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+				  <execution>
+				    <phase>deploy</phase>
+				    <configuration>
+				      <tasks>
 
 					<!--
 					  Place any Ant task here. You can add anything
@@ -302,11 +311,14 @@
 					  build.xml.
 					-->
 					<copy file="sm-shop/target/*.war" tofile="${project.basedir}/target/docker/"/>
-
-              			</tasks>
-				</images>
-			      </configuration>
-			    </plugin>
+				      </tasks>
+				    </configuration>
+				    <goals>
+				      <goal>run</goal>
+				    </goals>
+				  </execution>
+				</executions>
+			      </plugin>
 		</plugins>
 	</build>
 
