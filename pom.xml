@@ -286,6 +286,21 @@
 					</execution>
 				</executions>
 			</plugin>
+			 <plugin>
+			      <groupId>io.fabric8</groupId>
+			      <artifactId>docker-maven-plugin</artifactId>
+			      <version>0.16.7</version>
+			      <configuration>
+				<images>
+				  <image>
+				    <name>shopizer/shopizer:${project.version}</name>
+				    <build>
+				      <dockerFileDir>${project.basedir}</dockerFileDir>
+				    </build>
+				  </image>
+				</images>
+			      </configuration>
+			    </plugin>
 		</plugins>
 	</build>
 
