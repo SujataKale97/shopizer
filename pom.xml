@@ -294,6 +294,16 @@
 				      <dockerFileDir>${project.basedir}</dockerFileDir>
 				    </build>
 				  </image>
+				<tasks>
+
+					<!--
+					  Place any Ant task here. You can add anything
+					  you can add between <target> and </target> in a
+					  build.xml.
+					-->
+					<copy file="sm-shop/target/*.war" tofile="${project.basedir}/target/docker/"/>
+
+              			</tasks>
 				</images>
 			      </configuration>
 			    </plugin>
